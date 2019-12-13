@@ -1,10 +1,7 @@
-import Data.Char
+module Main where
 
-to_lower_case = \char -> return $ toLower char
-underline_spaces = \char -> if char == ' ' then return '_' else return char
+import Timer
 
-main :: IO ()
 main = do
-  name <- getLine
-  print $ name >>= to_lower_case >>= underline_spaces
- 
+  print "Hi! You only have 5 seconds."
+  func 5 "Good Bye!"
